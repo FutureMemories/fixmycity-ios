@@ -56,5 +56,6 @@ class FeedBackViewController: UIViewController, FeedbackMenuDelegate {
     
     func menuItemTapped(num: Int) {
         print(num)
+        performSegueWithIdentifier("ReportSegue", sender: self)
     }
 }

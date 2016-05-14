@@ -20,6 +20,7 @@
 		73633FF11CE708D600C7800A /* FeedbackMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FF01CE708D600C7800A /* FeedbackMenuCell.swift */; };
 		73633FF41CE714FC00C7800A /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73633FF21CE714FC00C7800A /* CircularStd-Bold.otf */; };
 		73633FF71CE71B2500C7800A /* CircularStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73633FF61CE71B2500C7800A /* CircularStd-Book.otf */; };
+		73633FF91CE7320B00C7800A /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FF81CE7320B00C7800A /* ReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		73633FF01CE708D600C7800A /* FeedbackMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackMenuCell.swift; sourceTree = "<group>"; };
 		73633FF21CE714FC00C7800A /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
 		73633FF61CE71B2500C7800A /* CircularStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.otf"; sourceTree = "<group>"; };
+		73633FF81CE7320B00C7800A /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				73633FBC1CE6FE9900C7800A /* AppDelegate.swift */,
 				73633FBE1CE6FE9900C7800A /* ViewController.swift */,
 				73633FEC1CE701D100C7800A /* FeedBackViewController.swift */,
+				73633FF81CE7320B00C7800A /* ReportViewController.swift */,
 				73633FEE1CE7088A00C7800A /* CollectionViewDataSource.swift */,
 				73633FF01CE708D600C7800A /* FeedbackMenuCell.swift */,
 				73633FC01CE6FE9900C7800A /* Main.storyboard */,
@@ -279,6 +282,7 @@
 			files = (
 				73633FF11CE708D600C7800A /* FeedbackMenuCell.swift in Sources */,
 				73633FBF1CE6FE9900C7800A /* ViewController.swift in Sources */,
+				73633FF91CE7320B00C7800A /* ReportViewController.swift in Sources */,
 				73633FED1CE701D100C7800A /* FeedBackViewController.swift in Sources */,
 				73633FBD1CE6FE9900C7800A /* AppDelegate.swift in Sources */,
 				73633FEF1CE7088A00C7800A /* CollectionViewDataSource.swift in Sources */,
