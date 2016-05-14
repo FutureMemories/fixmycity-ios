@@ -5,11 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="CircularStd-Book.otf">
-            <string>CircularStd-Book</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="sDR-rE-Kfw">
@@ -30,7 +25,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FixMyCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -43,9 +37,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bJL-qo-Kdh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9la-oA-F39">
-                                <rect key="frame" x="516" y="550" width="64" height="30"/>
-                                <state key="normal" title="feedback"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9la-oA-F39">
+                                <rect key="frame" x="514" y="514" width="66" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Brk-9S-l6Q"/>
+                                    <constraint firstAttribute="width" constant="66" id="mMu-vP-Gf8"/>
+                                </constraints>
+                                <state key="normal" image="Rapport-pinne"/>
                                 <connections>
                                     <action selector="addFeedback:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZYV-5e-D5d"/>
                                 </connections>
@@ -53,19 +51,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="9la-oA-F39" secondAttribute="bottom" constant="20" symbolic="YES" id="5IX-a3-4nd"/>
-                            <constraint firstItem="9la-oA-F39" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="84X-Zd-eQz"/>
+                            <constraint firstItem="9la-oA-F39" firstAttribute="top" secondItem="bJL-qo-Kdh" secondAttribute="bottom" constant="-86" id="70k-X9-0Ed"/>
                             <constraint firstItem="bJL-qo-Kdh" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="HVI-kA-erb"/>
                             <constraint firstItem="bJL-qo-Kdh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mkt-hq-a8r"/>
+                            <constraint firstItem="9la-oA-F39" firstAttribute="leading" secondItem="bJL-qo-Kdh" secondAttribute="trailing" constant="-86" id="ggE-l8-rWy"/>
                             <constraint firstItem="bJL-qo-Kdh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lkP-Mh-Pql"/>
                             <constraint firstAttribute="trailing" secondItem="bJL-qo-Kdh" secondAttribute="trailing" id="nnK-XM-8nr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="P8n-mL-0hg"/>
                     <connections>
+                        <outlet property="mapView" destination="bJL-qo-Kdh" id="96k-q0-oZ2"/>
                         <segue destination="hAe-By-6h9" kind="presentation" identifier="feedbackSegue" animates="NO" modalPresentationStyle="overCurrentContext" id="G9z-bE-t7n"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="480" y="462"/>
         </scene>
@@ -210,4 +210,7 @@
             <point key="canvasLocation" x="1258" y="477"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Rapport-pinne" width="164" height="164"/>
+    </resources>
 </document>
