@@ -1,7 +1,13 @@
 import UIKit
 
+protocol ReportViewDelegate {
+    func closeReport()
+}
+
 class ReportViewController: UIViewController {
 
+    var delegate : ReportViewDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,4 +30,8 @@ class ReportViewController: UIViewController {
     }
     */
 
+    @IBAction func closeMe(sender: AnyObject) {
+        delegate.closeReport()
+        dismissViewControllerAnimated(false, completion: nil)
+    }
 }

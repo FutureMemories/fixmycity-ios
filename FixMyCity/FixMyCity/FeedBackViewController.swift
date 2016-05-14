@@ -1,6 +1,6 @@
 import UIKit
 
-class FeedBackViewController: UIViewController, FeedbackMenuDelegate {
+class FeedBackViewController: UIViewController, FeedbackMenuDelegate, ReportViewDelegate {
 
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
@@ -27,6 +27,8 @@ class FeedBackViewController: UIViewController, FeedbackMenuDelegate {
     }
     
     func showUI() {
+        self.collectionView.alpha = 1
+        
         headerLabel.alpha = 0
         headerLabel.layer.transform = CATransform3DMakeScale(0.5, 0.5, 0.5)
         closeButton.alpha = 0
@@ -42,7 +44,19 @@ class FeedBackViewController: UIViewController, FeedbackMenuDelegate {
                 self.closeButton.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)
             })
         }
-        
+    }
+    
+    func hideUI() {
+        UIView.animateWithDuration(0.2, animations: {
+            self.headerLabel.alpha = 0
+            self.headerLabel.layer.transform = CATransform3DScale(CATransform3DIdentity, 0, 0, 0)
+            self.collectionView.alpha = 0
+        }) { (true) in
+            UIView.animateWithDuration(0.2, animations: { () -> Void in
+                self.closeButton.alpha = 0
+                self.closeButton.layer.transform = CATransform3DScale(CATransform3DIdentity, 0, 0, 0)
+            })
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,8 +68,22 @@ class FeedBackViewController: UIViewController, FeedbackMenuDelegate {
         dismissViewControllerAnimated(false, completion: nil)
     }
     
+    // MARK: Delegates
     func menuItemTapped(num: Int) {
         print(num)
+        hideUI()
         performSegueWithIdentifier("ReportSegue", sender: self)
+    }
+    
+    func closeReport() {
+        showUI()
+        collectionView.reloadData()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ReportSegue" {
+            let dest = segue.destinationViewController as! ReportViewController
+            dest.delegate = self
+        }
     }
 }
