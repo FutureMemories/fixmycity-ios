@@ -4,12 +4,13 @@ protocol ReportViewDelegate {
     func closeReport()
 }
 
-class ReportViewController: UIViewController {
+class ReportViewController: UIViewController,CategoriesDelegate {
     var menuItem : MenuItem!
     var delegate : ReportViewDelegate!
     
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var catLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +53,26 @@ class ReportViewController: UIViewController {
         }
     }
 
+    @IBAction func showCategories(sender: AnyObject) {
+                self.view.hidden = true
+        performSegueWithIdentifier("showCatagoriesSegue", sender: self)
+    }
+    
     @IBAction func closeMe(sender: AnyObject) {
         delegate.closeReport()
+
         dismissViewControllerAnimated(false, completion: nil)
+    }
+    
+    func categorySelected(cat : String) {
+        catLabel.text = cat
+        self.view.hidden = false
+        showUI()
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showCatagoriesSegue" {
+            let dest = segue.destinationViewController as! CategoriesTableViewController
+            dest.delegate = self
+        }
     }
 }

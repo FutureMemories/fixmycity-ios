@@ -79,26 +79,28 @@ class ViewController: UIViewController, MKMapViewDelegate {
             v!.annotation = annotation
         } else {
             v = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+            v!.canShowCallout = true
+//            v!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
             
-            v!.image = UIImage(named:"pin_fraga")
+            if annotation.title! == "Förslag" {
+                v!.image = UIImage(named:"pin_forslag")
+            } else if annotation.title! == "Fråga" {
+                v!.image = UIImage(named:"pin_fraga")
+            } else if annotation.title! == "Beröm" {
+                v!.image = UIImage(named:"pin_berom")
+            } else if annotation.title! == "Problem" {
+                v!.image = UIImage(named:"pin_problem")
+            } else if annotation.title! == "Skadat & trasigt" {
+                v!.image = UIImage(named:"pin_skada")
+            } else if annotation.title! == "Renhållning" {
+                v!.image = UIImage(named:"pin_renhallning")
+            }
         }
         
         return v
     }
     
     func setupPins(issues: [Issue]) {
-//        let locations = [
-//            ["name" : "Sunkstan",
-//                "latitude" : 57.70833,
-//                "longitude" : 11.96913,
-//                "mediaURL" : "http://www.apple.com"],
-//            ["name" : "raj raj",
-//                "latitude" : 57.71333,
-//                "longitude" : 11.96778,
-//                "mediaURL" : "http://www.bjsrestaurants.com"]
-//        ]
-//        
-//        
         
         for issue in issues {
             let latitude = CLLocationDegrees(issue.latitude)

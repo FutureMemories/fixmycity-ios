@@ -10,6 +10,8 @@
 		2D0E6F2A12DA00CA6C4CB216 /* Pods_FixMyCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D0CC4DC9B70CD38FDF897D7 /* Pods_FixMyCity.framework */; };
 		7318CCD41CE74FBB0036D535 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7318CCD31CE74FBB0036D535 /* Transfer.swift */; };
 		7318CCD61CE751670036D535 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7318CCD51CE751670036D535 /* Issue.swift */; };
+		7318CCD81CE75E450036D535 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7318CCD71CE75E450036D535 /* CategoriesTableViewController.swift */; };
+		7318CCDA1CE763AB0036D535 /* CategoriesDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7318CCD91CE763AB0036D535 /* CategoriesDatasource.swift */; };
 		73633FBD1CE6FE9900C7800A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FBC1CE6FE9900C7800A /* AppDelegate.swift */; };
 		73633FBF1CE6FE9900C7800A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FBE1CE6FE9900C7800A /* ViewController.swift */; };
 		73633FC21CE6FE9900C7800A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73633FC01CE6FE9900C7800A /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		269F6981AF5C2E19EA97A742 /* Pods-FixMyCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixMyCity.release.xcconfig"; path = "Pods/Target Support Files/Pods-FixMyCity/Pods-FixMyCity.release.xcconfig"; sourceTree = "<group>"; };
 		7318CCD31CE74FBB0036D535 /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		7318CCD51CE751670036D535 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		7318CCD71CE75E450036D535 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		7318CCD91CE763AB0036D535 /* CategoriesDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesDatasource.swift; sourceTree = "<group>"; };
 		73633FB91CE6FE9900C7800A /* FixMyCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixMyCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73633FBC1CE6FE9900C7800A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73633FBE1CE6FE9900C7800A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				7318CCD31CE74FBB0036D535 /* Transfer.swift */,
 				73633FBE1CE6FE9900C7800A /* ViewController.swift */,
 				73633FEC1CE701D100C7800A /* FeedBackViewController.swift */,
+				7318CCD71CE75E450036D535 /* CategoriesTableViewController.swift */,
+				7318CCD91CE763AB0036D535 /* CategoriesDatasource.swift */,
 				73633FF81CE7320B00C7800A /* ReportViewController.swift */,
 				73633FEE1CE7088A00C7800A /* CollectionViewDataSource.swift */,
 				73633FFA1CE73AD300C7800A /* Enums.swift */,
@@ -373,10 +379,12 @@
 				73633FF91CE7320B00C7800A /* ReportViewController.swift in Sources */,
 				73633FED1CE701D100C7800A /* FeedBackViewController.swift in Sources */,
 				73633FFB1CE73AD300C7800A /* Enums.swift in Sources */,
+				7318CCD81CE75E450036D535 /* CategoriesTableViewController.swift in Sources */,
 				7318CCD61CE751670036D535 /* Issue.swift in Sources */,
 				73633FFD1CE73C8400C7800A /* MenuItem.swift in Sources */,
 				73633FBD1CE6FE9900C7800A /* AppDelegate.swift in Sources */,
 				7318CCD41CE74FBB0036D535 /* Transfer.swift in Sources */,
+				7318CCDA1CE763AB0036D535 /* CategoriesDatasource.swift in Sources */,
 				73633FEF1CE7088A00C7800A /* CollectionViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -234,6 +234,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74C-xT-9Np">
                                                 <rect key="frame" x="26" y="47" width="45" height="28"/>
                                                 <state key="normal" image="List"/>
+                                                <connections>
+                                                    <action selector="showCategories:" destination="Qco-An-Wzg" eventType="touchUpInside" id="Y6k-a6-Z0f"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Välj en kategori" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2N-3e-zR1">
                                                 <rect key="frame" x="222" y="50" width="117" height="21"/>
@@ -336,13 +339,93 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="catLabel" destination="M2N-3e-zR1" id="1JV-Mp-a2t"/>
                         <outlet property="header" destination="OgL-VA-nu1" id="Smh-bX-yqD"/>
                         <outlet property="icon" destination="asJ-kg-xGy" id="Hh6-IL-oQd"/>
+                        <segue destination="OZs-Mb-Byk" kind="presentation" identifier="showCatagoriesSegue" id="9zT-Yh-Hhj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EfR-ij-fzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1987" y="477"/>
+        </scene>
+        <!--Categories Table View Controller-->
+        <scene sceneID="LB4-Kb-25d">
+            <objects>
+                <viewController id="OZs-Mb-Byk" customClass="CategoriesTableViewController" customModule="FixMyCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dCy-0h-DPB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Msy-n8-AkX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="prh-BQ-8us">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-Ti-qNy">
+                                <rect key="frame" x="76" y="75" width="445" height="471"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="1kz-JN-qm5">
+                                        <rect key="frame" x="0.0" y="28" width="445" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1kz-JN-qm5" id="HDG-as-Y9S">
+                                            <rect key="frame" x="0.0" y="0.0" width="445" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ATI-4R-teT" id="JNA-b3-SQt"/>
+                                    <outlet property="delegate" destination="ATI-4R-teT" id="4Ax-DW-WpC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mqb-Ti-qNy" firstAttribute="bottom" secondItem="Msy-n8-AkX" secondAttribute="top" constant="-54" id="4dy-1o-A6Y"/>
+                            <constraint firstAttribute="trailing" secondItem="mqb-Ti-qNy" secondAttribute="trailing" constant="79" id="9gE-Bo-oCA"/>
+                            <constraint firstItem="mqb-Ti-qNy" firstAttribute="top" secondItem="prh-BQ-8us" secondAttribute="top" constant="75" id="GCC-oO-KaP"/>
+                            <constraint firstItem="mqb-Ti-qNy" firstAttribute="leading" secondItem="prh-BQ-8us" secondAttribute="leading" constant="76" id="eMt-MZ-Jw6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="mqb-Ti-qNy" id="16r-tr-Iup"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0u-T6-B1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="ATI-4R-teT" customClass="CategoriesDatasource" customModule="FixMyCity" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="2684" y="486"/>
+        </scene>
+        <!--Categories Table View Controller-->
+        <scene sceneID="qsZ-uj-I4v">
+            <objects>
+                <tableViewController id="i3v-FW-AaV" customClass="CategoriesTableViewController" customModule="FixMyCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QeI-tA-wMw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Bt1-5f-zpe">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bt1-5f-zpe" id="2Vj-eO-abx">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="i3v-FW-AaV" id="MsY-Qv-6lb"/>
+                            <outlet property="delegate" destination="i3v-FW-AaV" id="6ds-Q5-HYN"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rgf-LY-Gva" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2674" y="1200"/>
         </scene>
     </scenes>
     <resources>
