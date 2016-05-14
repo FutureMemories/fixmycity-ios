@@ -25,8 +25,6 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollecti
         var cell : FeedbackMenuCell
         
         cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FeedbackMenuCell
-//        let buttonImage = TempMachineDetailMenuButtonImages.allButtons[indexPath.row].rawValue
-//        let buttonTitle = items[indexPath.row].rawValue
         
         cell.imageView.image = UIImage(named: images[indexPath.row])
         cell.buttonTitle.text = items[indexPath.row]
@@ -34,7 +32,6 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollecti
         cell.buttonTitle.text = menuItems[indexPath.row].header
         cell.tag = indexPath.row
         cell.menuItem = menuItems[indexPath.row]
-        print(cell.menuItem)
         
         return cell
     }
@@ -69,8 +66,6 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollecti
         
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-//        let row = indexPath.row
-//        let currentCell = collectionView.cellForRowAtIndexPath(indexPath) as! FeedbackMenuCell
         let currentCell = collectionView.cellForItemAtIndexPath(indexPath) as! FeedbackMenuCell
         delegate.menuItemTapped(currentCell.menuItem)
     }
@@ -78,11 +73,7 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollecti
      func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         cell.alpha = 0
         cell.layer.transform = CATransform3DMakeScale(0.5, 0.5, 0.5)
-//        UIView.animateWithDuration(0.2, animations: { () -> Void in
-//            cell.alpha = 1
-//            cell.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)
-//        })
-//        
+
         UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             cell.alpha = 1
             cell.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)

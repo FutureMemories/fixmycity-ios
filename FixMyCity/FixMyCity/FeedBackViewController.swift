@@ -1,7 +1,8 @@
 import UIKit
 
 class FeedBackViewController: UIViewController, FeedbackMenuDelegate, ReportViewDelegate {
-
+    var selectedMenuItem : MenuItem!
+    
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -27,10 +28,12 @@ class FeedBackViewController: UIViewController, FeedbackMenuDelegate, ReportView
         let menuItem6 = MenuItem(header: "Renhållning", imageName: "Renhallning")
         
         datasource.menuItems = [menuItem1,menuItem2,menuItem3,menuItem4,menuItem5,menuItem6]
-        print(datasource.menuItems.count)
 //        collectionView.reloadData()
     }
     
+    func addItemsToMenu() {
+        
+    }
     override func viewDidAppear(animated: Bool) {
         showUI()
     }
@@ -60,11 +63,15 @@ class FeedBackViewController: UIViewController, FeedbackMenuDelegate, ReportView
             self.headerLabel.alpha = 0
             self.headerLabel.layer.transform = CATransform3DScale(CATransform3DIdentity, 0, 0, 0)
             self.collectionView.alpha = 0
+            
+            self.closeButton.alpha = 0
+            self.closeButton.layer.transform = CATransform3DScale(CATransform3DIdentity, 0, 0, 0)
+            
         }) { (true) in
-            UIView.animateWithDuration(0.2, animations: { () -> Void in
-                self.closeButton.alpha = 0
-                self.closeButton.layer.transform = CATransform3DScale(CATransform3DIdentity, 0, 0, 0)
-            })
+//            UIView.animateWithDuration(0.1, animations: { () -> Void in
+//                self.closeButton.alpha = 0
+//                self.closeButton.layer.transform = CATransform3DScale(CATransform3DIdentity, 0, 0, 0)
+//            })
         }
     }
     
@@ -79,7 +86,7 @@ class FeedBackViewController: UIViewController, FeedbackMenuDelegate, ReportView
     
     // MARK: Delegates
     func menuItemTapped(menuItem: MenuItem) {
-        print(menuItem.header)
+        selectedMenuItem = menuItem
         hideUI()
         performSegueWithIdentifier("ReportSegue", sender: self)
     }
@@ -92,6 +99,7 @@ class FeedBackViewController: UIViewController, FeedbackMenuDelegate, ReportView
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ReportSegue" {
             let dest = segue.destinationViewController as! ReportViewController
+            dest.menuItem = selectedMenuItem
             dest.delegate = self
         }
     }

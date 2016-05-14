@@ -5,30 +5,52 @@ protocol ReportViewDelegate {
 }
 
 class ReportViewController: UIViewController {
-
+    var menuItem : MenuItem!
     var delegate : ReportViewDelegate!
+    
+    @IBOutlet weak var header: UILabel!
+    @IBOutlet weak var icon: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        header.font = UIFont(name: "CircularStd-Book", size: 24)
+        
+        icon.image = UIImage(named: menuItem.imageName)
+        header.text = menuItem.header
+        
     }
 
+    override func viewDidAppear(animated: Bool) {
+        showUI()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func showUI() {
+        
+        
+        header.alpha = 0
+        header.layer.transform = CATransform3DMakeScale(0.5, 0.5, 0.5)
+        icon.alpha = 0
+        icon.layer.transform = CATransform3DMakeScale(0.5, 0.5, 0.5)
+        
+        UIView.animateWithDuration(0.2, animations: {
+            self.header.alpha = 1
+            self.header.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)
+            self.icon.alpha = 1
+            self.icon.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)
+            
+            
+        }) { (true) in
+//            UIView.animateWithDuration(0.2, animations: { () -> Void in
+//                self.closeButton.alpha = 1
+//                self.closeButton.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)
+//            })
+        }
     }
-    */
 
     @IBAction func closeMe(sender: AnyObject) {
         delegate.closeReport()
