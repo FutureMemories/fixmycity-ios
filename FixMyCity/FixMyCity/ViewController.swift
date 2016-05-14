@@ -5,7 +5,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(UIFont.familyNames())
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -16,9 +15,7 @@ class ViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
 
     @IBAction func addFeedback(sender: AnyObject) {
         performSegueWithIdentifier("feedbackSegue", sender: self)

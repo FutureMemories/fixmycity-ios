@@ -200,6 +200,7 @@
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="FLM-Hc-tmm" id="3eM-GR-j1j"/>
+                        <outlet property="collectionView" destination="tuM-M5-R3v" id="1UW-bO-l9I"/>
                         <outlet property="headerLabel" destination="7E2-Ls-dcR" id="2rp-LB-cS6"/>
                     </connections>
                 </viewController>

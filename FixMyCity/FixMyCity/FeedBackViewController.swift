@@ -1,16 +1,14 @@
 import UIKit
 
-class FeedBackViewController: UIViewController {
+class FeedBackViewController: UIViewController, FeedbackMenuDelegate {
 
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-//        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "CircularStd-Bold", size: 24)!,  NSForegroundColorAttributeName: titleColor]
-//    
         let attributedTitle = NSAttributedString(string: "STÄNG",
                                                            attributes: [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "CircularStd-Book", size: 24)!])
         closeButton.setAttributedTitle(attributedTitle, forState: .Selected)
@@ -18,16 +16,20 @@ class FeedBackViewController: UIViewController {
         
         headerLabel.font = UIFont(name: "CircularStd-Book", size: 24)
         
-        
+        let datasource = collectionView.dataSource as! CollectionViewDataSource
+        datasource.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-    
 
     @IBAction func closeMe(sender: AnyObject) {
         dismissViewControllerAnimated(false, completion: nil)
+    }
+    
+    func menuItemTapped(num: Int) {
+        print(num)
     }
 }

@@ -64,7 +64,7 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollecti
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let row = indexPath.row
-//        delegate.machineDetailMenuItemTapped(row)
+        delegate.menuItemTapped(row)
     }
     
 }
