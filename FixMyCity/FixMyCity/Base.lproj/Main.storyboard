@@ -235,11 +235,19 @@
                                                 <rect key="frame" x="26" y="47" width="45" height="28"/>
                                                 <state key="normal" image="List"/>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Välj en kategori" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2N-3e-zR1">
+                                                <rect key="frame" x="222" y="50" width="117" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="74C-xT-9Np" firstAttribute="top" secondItem="Yjp-8W-KxL" secondAttribute="top" constant="47" id="2a2-aV-31B"/>
                                             <constraint firstItem="74C-xT-9Np" firstAttribute="centerY" secondItem="Yjp-8W-KxL" secondAttribute="centerY" id="Evc-64-5nz"/>
+                                            <constraint firstItem="M2N-3e-zR1" firstAttribute="centerY" secondItem="74C-xT-9Np" secondAttribute="centerY" id="ZMT-cS-8O8"/>
+                                            <constraint firstItem="M2N-3e-zR1" firstAttribute="centerX" secondItem="Yjp-8W-KxL" secondAttribute="centerX" id="jLg-Zt-NXJ"/>
                                             <constraint firstItem="74C-xT-9Np" firstAttribute="leading" secondItem="Yjp-8W-KxL" secondAttribute="leading" constant="26" id="pdM-BY-PqK"/>
                                         </constraints>
                                     </view>
@@ -260,6 +268,12 @@
                                                 <rect key="frame" x="27" y="46" width="43" height="35"/>
                                                 <state key="normal" image="Cam"/>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lägg till en kommentar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYc-mH-y3i">
+                                                <rect key="frame" x="185" y="50" width="175" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -267,7 +281,9 @@
                                             <constraint firstItem="HWu-5m-DCs" firstAttribute="centerY" secondItem="ETV-cy-cvt" secondAttribute="centerY" id="3wL-1c-vGU"/>
                                             <constraint firstItem="b5P-aL-K2u" firstAttribute="top" secondItem="ETV-cy-cvt" secondAttribute="top" id="Eit-97-6ih"/>
                                             <constraint firstItem="b5P-aL-K2u" firstAttribute="leading" secondItem="kW5-mM-Cjl" secondAttribute="leading" constant="27" id="b6A-NC-DML"/>
+                                            <constraint firstItem="JYc-mH-y3i" firstAttribute="top" secondItem="kW5-mM-Cjl" secondAttribute="top" constant="50" id="ePi-nX-hzj"/>
                                             <constraint firstItem="ETV-cy-cvt" firstAttribute="leading" secondItem="HWu-5m-DCs" secondAttribute="trailing" constant="18" id="en6-1r-5FO"/>
+                                            <constraint firstItem="JYc-mH-y3i" firstAttribute="leading" secondItem="ETV-cy-cvt" secondAttribute="trailing" constant="27" id="gcC-a1-6nk"/>
                                             <constraint firstItem="HWu-5m-DCs" firstAttribute="top" secondItem="kW5-mM-Cjl" secondAttribute="top" constant="38" id="yAY-7A-0OD"/>
                                         </constraints>
                                     </view>

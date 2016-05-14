@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0E6F2A12DA00CA6C4CB216 /* Pods_FixMyCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D0CC4DC9B70CD38FDF897D7 /* Pods_FixMyCity.framework */; };
+		7318CCD41CE74FBB0036D535 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7318CCD31CE74FBB0036D535 /* Transfer.swift */; };
+		7318CCD61CE751670036D535 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7318CCD51CE751670036D535 /* Issue.swift */; };
 		73633FBD1CE6FE9900C7800A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FBC1CE6FE9900C7800A /* AppDelegate.swift */; };
 		73633FBF1CE6FE9900C7800A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FBE1CE6FE9900C7800A /* ViewController.swift */; };
 		73633FC21CE6FE9900C7800A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73633FC01CE6FE9900C7800A /* Main.storyboard */; };
@@ -43,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20E6843F1BE4354CB951429C /* Pods-FixMyCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixMyCity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FixMyCity/Pods-FixMyCity.debug.xcconfig"; sourceTree = "<group>"; };
+		269F6981AF5C2E19EA97A742 /* Pods-FixMyCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixMyCity.release.xcconfig"; path = "Pods/Target Support Files/Pods-FixMyCity/Pods-FixMyCity.release.xcconfig"; sourceTree = "<group>"; };
+		7318CCD31CE74FBB0036D535 /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
+		7318CCD51CE751670036D535 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		73633FB91CE6FE9900C7800A /* FixMyCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixMyCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73633FBC1CE6FE9900C7800A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73633FBE1CE6FE9900C7800A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +72,7 @@
 		73633FF81CE7320B00C7800A /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		73633FFA1CE73AD300C7800A /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		73633FFC1CE73C8400C7800A /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		8D0CC4DC9B70CD38FDF897D7 /* Pods_FixMyCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FixMyCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73633FEB1CE6FF1A00C7800A /* MapKit.framework in Frameworks */,
+				2D0E6F2A12DA00CA6C4CB216 /* Pods_FixMyCity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +110,8 @@
 				73633FD01CE6FE9900C7800A /* FixMyCityTests */,
 				73633FDB1CE6FE9900C7800A /* FixMyCityUITests */,
 				73633FBA1CE6FE9900C7800A /* Products */,
+				E268B58418B2585344FF392F /* Pods */,
+				7E941FBE1533CD4F53A60245 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,12 +129,14 @@
 			isa = PBXGroup;
 			children = (
 				73633FBC1CE6FE9900C7800A /* AppDelegate.swift */,
+				7318CCD31CE74FBB0036D535 /* Transfer.swift */,
 				73633FBE1CE6FE9900C7800A /* ViewController.swift */,
 				73633FEC1CE701D100C7800A /* FeedBackViewController.swift */,
 				73633FF81CE7320B00C7800A /* ReportViewController.swift */,
 				73633FEE1CE7088A00C7800A /* CollectionViewDataSource.swift */,
 				73633FFA1CE73AD300C7800A /* Enums.swift */,
 				73633FFC1CE73C8400C7800A /* MenuItem.swift */,
+				7318CCD51CE751670036D535 /* Issue.swift */,
 				73633FF01CE708D600C7800A /* FeedbackMenuCell.swift */,
 				73633FC01CE6FE9900C7800A /* Main.storyboard */,
 				73633FC31CE6FE9900C7800A /* Assets.xcassets */,
@@ -153,6 +166,23 @@
 			path = FixMyCityUITests;
 			sourceTree = "<group>";
 		};
+		7E941FBE1533CD4F53A60245 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D0CC4DC9B70CD38FDF897D7 /* Pods_FixMyCity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E268B58418B2585344FF392F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20E6843F1BE4354CB951429C /* Pods-FixMyCity.debug.xcconfig */,
+				269F6981AF5C2E19EA97A742 /* Pods-FixMyCity.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73633FE11CE6FE9900C7800A /* Build configuration list for PBXNativeTarget "FixMyCity" */;
 			buildPhases = (
+				26C42450192AF01A16C796F0 /* Check Pods Manifest.lock */,
 				73633FB51CE6FE9900C7800A /* Sources */,
 				73633FB61CE6FE9900C7800A /* Frameworks */,
 				73633FB71CE6FE9900C7800A /* Resources */,
+				5F15B8B09BBC8ECB3805E41F /* Embed Pods Frameworks */,
+				B9C649A6351424BF01D84A94 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,6 +315,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26C42450192AF01A16C796F0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F15B8B09BBC8ECB3805E41F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FixMyCity/Pods-FixMyCity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9C649A6351424BF01D84A94 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FixMyCity/Pods-FixMyCity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		73633FB51CE6FE9900C7800A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -292,8 +373,10 @@
 				73633FF91CE7320B00C7800A /* ReportViewController.swift in Sources */,
 				73633FED1CE701D100C7800A /* FeedBackViewController.swift in Sources */,
 				73633FFB1CE73AD300C7800A /* Enums.swift in Sources */,
+				7318CCD61CE751670036D535 /* Issue.swift in Sources */,
 				73633FFD1CE73C8400C7800A /* MenuItem.swift in Sources */,
 				73633FBD1CE6FE9900C7800A /* AppDelegate.swift in Sources */,
+				7318CCD41CE74FBB0036D535 /* Transfer.swift in Sources */,
 				73633FEF1CE7088A00C7800A /* CollectionViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +519,7 @@
 		};
 		73633FE21CE6FE9900C7800A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20E6843F1BE4354CB951429C /* Pods-FixMyCity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -450,6 +534,7 @@
 		};
 		73633FE31CE6FE9900C7800A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 269F6981AF5C2E19EA97A742 /* Pods-FixMyCity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -527,6 +612,7 @@
 				73633FE31CE6FE9900C7800A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73633FE41CE6FE9900C7800A /* Build configuration list for PBXNativeTarget "FixMyCityTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +621,7 @@
 				73633FE61CE6FE9900C7800A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73633FE71CE6FE9900C7800A /* Build configuration list for PBXNativeTarget "FixMyCityUITests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +630,7 @@
 				73633FE91CE6FE9900C7800A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
