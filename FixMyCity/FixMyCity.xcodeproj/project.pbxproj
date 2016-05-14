@@ -18,6 +18,8 @@
 		73633FED1CE701D100C7800A /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FEC1CE701D100C7800A /* FeedBackViewController.swift */; };
 		73633FEF1CE7088A00C7800A /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FEE1CE7088A00C7800A /* CollectionViewDataSource.swift */; };
 		73633FF11CE708D600C7800A /* FeedbackMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FF01CE708D600C7800A /* FeedbackMenuCell.swift */; };
+		73633FF41CE714FC00C7800A /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73633FF21CE714FC00C7800A /* CircularStd-Bold.otf */; };
+		73633FF71CE71B2500C7800A /* CircularStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73633FF61CE71B2500C7800A /* CircularStd-Book.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		73633FEC1CE701D100C7800A /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
 		73633FEE1CE7088A00C7800A /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		73633FF01CE708D600C7800A /* FeedbackMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackMenuCell.swift; sourceTree = "<group>"; };
+		73633FF21CE714FC00C7800A /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
+		73633FF61CE71B2500C7800A /* CircularStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				73633FC31CE6FE9900C7800A /* Assets.xcassets */,
 				73633FC51CE6FE9900C7800A /* LaunchScreen.storyboard */,
 				73633FC81CE6FE9900C7800A /* Info.plist */,
+				73633FF61CE71B2500C7800A /* CircularStd-Book.otf */,
+				73633FF21CE714FC00C7800A /* CircularStd-Bold.otf */,
 			);
 			path = FixMyCity;
 			sourceTree = "<group>";
@@ -242,7 +248,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73633FF71CE71B2500C7800A /* CircularStd-Book.otf in Resources */,
 				73633FC71CE6FE9900C7800A /* LaunchScreen.storyboard in Resources */,
+				73633FF41CE714FC00C7800A /* CircularStd-Bold.otf in Resources */,
 				73633FC41CE6FE9900C7800A /* Assets.xcassets in Resources */,
 				73633FC21CE6FE9900C7800A /* Main.storyboard in Resources */,
 			);

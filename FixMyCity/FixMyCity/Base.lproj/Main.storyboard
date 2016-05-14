@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="i3d-lP-kh1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="sDR-rE-Kfw">
+            <objects>
+                <navigationController id="i3d-lP-kh1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u65-O2-f7U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vGj-Sf-m7a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbb-Bf-8B5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242" y="462"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FixMyCity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -31,19 +53,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bJL-qo-Kdh" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="2VG-0D-Ktu"/>
-                            <constraint firstItem="9la-oA-F39" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3w7-In-e1q"/>
-                            <constraint firstAttribute="trailing" secondItem="bJL-qo-Kdh" secondAttribute="trailing" id="DbW-sP-gmo"/>
-                            <constraint firstItem="bJL-qo-Kdh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JOA-Xv-PmX"/>
-                            <constraint firstItem="bJL-qo-Kdh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h01-lm-a8p"/>
-                            <constraint firstAttribute="bottom" secondItem="9la-oA-F39" secondAttribute="bottom" constant="20" symbolic="YES" id="lsM-ud-p45"/>
+                            <constraint firstAttribute="bottom" secondItem="9la-oA-F39" secondAttribute="bottom" constant="20" symbolic="YES" id="5IX-a3-4nd"/>
+                            <constraint firstItem="9la-oA-F39" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="84X-Zd-eQz"/>
+                            <constraint firstItem="bJL-qo-Kdh" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="HVI-kA-erb"/>
+                            <constraint firstItem="bJL-qo-Kdh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mkt-hq-a8r"/>
+                            <constraint firstItem="bJL-qo-Kdh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lkP-Mh-Pql"/>
+                            <constraint firstAttribute="trailing" secondItem="bJL-qo-Kdh" secondAttribute="trailing" id="nnK-XM-8nr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="P8n-mL-0hg"/>
                     <connections>
-                        <segue destination="hAe-By-6h9" kind="presentation" identifier="feedbackSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="G9z-bE-t7n"/>
+                        <segue destination="hAe-By-6h9" kind="presentation" identifier="feedbackSegue" animates="NO" modalPresentationStyle="overCurrentContext" id="G9z-bE-t7n"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="480" y="462"/>
         </scene>
@@ -120,14 +142,51 @@
                                                 <outlet property="delegate" destination="YGC-BD-M26" id="PHt-5y-igM"/>
                                             </connections>
                                         </collectionView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLM-Hc-tmm">
+                                            <rect key="frame" x="249" y="562" width="102" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="102" id="hoS-Uz-1Lj"/>
+                                            </constraints>
+                                            <state key="normal">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="STÄNG">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="24" name="CircularStd-Book"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </state>
+                                            <connections>
+                                                <action selector="closeMe:" destination="hAe-By-6h9" eventType="touchUpInside" id="wvz-Jn-39i"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7E2-Ls-dcR">
+                                            <rect key="frame" x="213" y="53" width="183" height="23"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Vad gäller ditt ärende?">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="18" name="CircularStd-Book"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
+                                        <constraint firstItem="7E2-Ls-dcR" firstAttribute="centerX" secondItem="tuM-M5-R3v" secondAttribute="centerX" constant="4" id="1ej-Ft-JmB"/>
+                                        <constraint firstItem="tuM-M5-R3v" firstAttribute="top" secondItem="7E2-Ls-dcR" secondAttribute="bottom" constant="47" id="GI1-vJ-CLW"/>
                                         <constraint firstItem="tuM-M5-R3v" firstAttribute="leading" secondItem="YVd-aS-M5c" secondAttribute="leadingMargin" id="Rp6-I2-ejw"/>
                                         <constraint firstItem="tuM-M5-R3v" firstAttribute="trailing" secondItem="YVd-aS-M5c" secondAttribute="trailingMargin" id="WJb-Rm-vuY"/>
+                                        <constraint firstItem="FLM-Hc-tmm" firstAttribute="top" secondItem="tuM-M5-R3v" secondAttribute="bottom" constant="86" id="czu-Xb-E1t"/>
                                         <constraint firstAttribute="bottom" secondItem="tuM-M5-R3v" secondAttribute="bottom" constant="124" id="lLY-Jx-YYw"/>
+                                        <constraint firstItem="FLM-Hc-tmm" firstAttribute="bottom" secondItem="YVd-aS-M5c" secondAttribute="bottomMargin" id="mJP-H0-gbz"/>
+                                        <constraint firstItem="FLM-Hc-tmm" firstAttribute="centerX" secondItem="tuM-M5-R3v" secondAttribute="centerX" id="nMC-pN-p0m"/>
                                     </constraints>
                                 </view>
+                                <color key="backgroundColor" red="0.062781635438023953" green="0.29359153717972258" blue="0.4769767992424242" alpha="0.26929370777027029" colorSpace="calibratedRGB"/>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                         </subviews>
@@ -139,6 +198,10 @@
                             <constraint firstItem="aad-Gx-umA" firstAttribute="top" secondItem="0i5-2g-TpB" secondAttribute="top" id="sKl-oM-j0o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="FLM-Hc-tmm" id="3eM-GR-j1j"/>
+                        <outlet property="headerLabel" destination="7E2-Ls-dcR" id="2rp-LB-cS6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyA-3w-SdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="YGC-BD-M26" customClass="CollectionViewDataSource" customModule="FixMyCity" customModuleProvider="target"/>

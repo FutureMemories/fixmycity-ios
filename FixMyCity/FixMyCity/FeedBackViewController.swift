@@ -1,35 +1,33 @@
-//
-//  FeedBackViewController.swift
-//  FixMyCity
-//
-//  Created by Mikael Hellqvist on 14/05/16.
-//  Copyright © 2016 FutureMemories. All rights reserved.
-//
-
 import UIKit
 
 class FeedBackViewController: UIViewController {
 
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var closeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+//        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "CircularStd-Bold", size: 24)!,  NSForegroundColorAttributeName: titleColor]
+//    
+        let attributedTitle = NSAttributedString(string: "STÄNG",
+                                                           attributes: [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "CircularStd-Book", size: 24)!])
+        closeButton.setAttributedTitle(attributedTitle, forState: .Selected)
+        closeButton.setAttributedTitle(attributedTitle, forState: .Normal)
+        
+        headerLabel.font = UIFont(name: "CircularStd-Book", size: 24)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func closeMe(sender: AnyObject) {
+        dismissViewControllerAnimated(false, completion: nil)
     }
-    */
-
 }
