@@ -8,6 +8,7 @@ class ReportViewController: UIViewController,UINavigationControllerDelegate,UIIm
     var menuItem : MenuItem!
     var delegate : ReportViewDelegate!
     let imagePicker = UIImagePickerController()
+    var currentImage : UIImage!
     
     @IBOutlet weak var thumb: UIImageView!
     @IBOutlet weak var header: UILabel!
@@ -92,6 +93,12 @@ class ReportViewController: UIViewController,UINavigationControllerDelegate,UIIm
         }
     }
     
+    @IBAction func send(sender: AnyObject) {
+        let transfer = Transfer()
+        transfer.postJson(currentImage, parameters: [:]) { (responseString) in
+            print(responseString)
+        }
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showCatagoriesSegue" {
             let dest = segue.destinationViewController as! CategoriesTableViewController
@@ -117,6 +124,7 @@ class ReportViewController: UIViewController,UINavigationControllerDelegate,UIIm
         dismissViewControllerAnimated(true) {
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage
             self.thumb.image = image
+            self.currentImage = image
 //            self.cameraButton.setBackgroundImage(image, forState: .Normal)
         }
     }
