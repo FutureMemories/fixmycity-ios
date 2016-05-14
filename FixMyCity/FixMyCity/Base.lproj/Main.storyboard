@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="sDR-rE-Kfw">
@@ -186,7 +191,7 @@
                                         <constraint firstItem="tuM-M5-R3v" firstAttribute="leading" secondItem="YVd-aS-M5c" secondAttribute="leadingMargin" id="txm-CW-Epa"/>
                                     </constraints>
                                 </view>
-                                <color key="backgroundColor" red="0.062781635438023953" green="0.29359153717972258" blue="0.4769767992424242" alpha="0.26929370777027029" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.062781635438023953" green="0.29359153717972258" blue="0.62127675812400318" alpha="0.45119826858108109" colorSpace="calibratedRGB"/>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                         </subviews>
@@ -238,10 +243,17 @@
                                                     <action selector="showCategories:" destination="Qco-An-Wzg" eventType="touchUpInside" id="Y6k-a6-Z0f"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Välj en kategori" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2N-3e-zR1">
-                                                <rect key="frame" x="222" y="50" width="117" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2N-3e-zR1">
+                                                <rect key="frame" x="221" y="50" width="118" height="22"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Välj en kategori">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="17" name="CircularStd-Book"/>
+                                                            <font key="NSOriginalFont" size="17" name="CircularStd-Book"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -277,12 +289,6 @@
                                                     <action selector="showCamera:" destination="Qco-An-Wzg" eventType="touchUpInside" id="Z5k-er-E3X"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lägg till en kommentar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYc-mH-y3i">
-                                                <rect key="frame" x="185" y="50" width="175" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FkW-nU-KJi">
                                                 <rect key="frame" x="8" y="17" width="74" height="93"/>
                                                 <constraints>
@@ -290,6 +296,18 @@
                                                     <constraint firstAttribute="width" constant="74" id="atR-qA-F81"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYc-mH-y3i">
+                                                <rect key="frame" x="185" y="50" width="176" height="22"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Lägg till en kommentar">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="17" name="CircularStd-Book"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>

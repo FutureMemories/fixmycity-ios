@@ -13,7 +13,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         mapView.delegate = self
         fetchIssues()
-        
+        transfer.postJson("", parameters: [:]) { (responseString) in
+            
+        }
 //        setupPins()
         
     }
