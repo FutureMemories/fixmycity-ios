@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  FixMyCity
-//
-//  Created by Mikael Hellqvist on 14/05/16.
-//  Copyright © 2016 FutureMemories. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -21,5 +13,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func addFeedback(sender: AnyObject) {
+        performSegueWithIdentifier("feedbackSegue", sender: self)
+    }
 }
 

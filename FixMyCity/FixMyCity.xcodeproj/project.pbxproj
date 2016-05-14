@@ -14,6 +14,10 @@
 		73633FC71CE6FE9900C7800A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73633FC51CE6FE9900C7800A /* LaunchScreen.storyboard */; };
 		73633FD21CE6FE9900C7800A /* FixMyCityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FD11CE6FE9900C7800A /* FixMyCityTests.swift */; };
 		73633FDD1CE6FE9900C7800A /* FixMyCityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FDC1CE6FE9900C7800A /* FixMyCityUITests.swift */; };
+		73633FEB1CE6FF1A00C7800A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73633FEA1CE6FF1A00C7800A /* MapKit.framework */; };
+		73633FED1CE701D100C7800A /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FEC1CE701D100C7800A /* FeedBackViewController.swift */; };
+		73633FEF1CE7088A00C7800A /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FEE1CE7088A00C7800A /* CollectionViewDataSource.swift */; };
+		73633FF11CE708D600C7800A /* FeedbackMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73633FF01CE708D600C7800A /* FeedbackMenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		73633FD81CE6FE9900C7800A /* FixMyCityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixMyCityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73633FDC1CE6FE9900C7800A /* FixMyCityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixMyCityUITests.swift; sourceTree = "<group>"; };
 		73633FDE1CE6FE9900C7800A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73633FEA1CE6FF1A00C7800A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		73633FEC1CE701D100C7800A /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
+		73633FEE1CE7088A00C7800A /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		73633FF01CE708D600C7800A /* FeedbackMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackMenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73633FEB1CE6FF1A00C7800A /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +86,7 @@
 		73633FB01CE6FE9900C7800A = {
 			isa = PBXGroup;
 			children = (
+				73633FEA1CE6FF1A00C7800A /* MapKit.framework */,
 				73633FBB1CE6FE9900C7800A /* FixMyCity */,
 				73633FD01CE6FE9900C7800A /* FixMyCityTests */,
 				73633FDB1CE6FE9900C7800A /* FixMyCityUITests */,
@@ -99,6 +109,9 @@
 			children = (
 				73633FBC1CE6FE9900C7800A /* AppDelegate.swift */,
 				73633FBE1CE6FE9900C7800A /* ViewController.swift */,
+				73633FEC1CE701D100C7800A /* FeedBackViewController.swift */,
+				73633FEE1CE7088A00C7800A /* CollectionViewDataSource.swift */,
+				73633FF01CE708D600C7800A /* FeedbackMenuCell.swift */,
 				73633FC01CE6FE9900C7800A /* Main.storyboard */,
 				73633FC31CE6FE9900C7800A /* Assets.xcassets */,
 				73633FC51CE6FE9900C7800A /* LaunchScreen.storyboard */,
@@ -256,8 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73633FF11CE708D600C7800A /* FeedbackMenuCell.swift in Sources */,
 				73633FBF1CE6FE9900C7800A /* ViewController.swift in Sources */,
+				73633FED1CE701D100C7800A /* FeedBackViewController.swift in Sources */,
 				73633FBD1CE6FE9900C7800A /* AppDelegate.swift in Sources */,
+				73633FEF1CE7088A00C7800A /* CollectionViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
