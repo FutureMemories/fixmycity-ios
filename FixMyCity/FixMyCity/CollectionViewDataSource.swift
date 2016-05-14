@@ -3,7 +3,7 @@
 import UIKit
 
 protocol FeedbackMenuDelegate {
-    func menuItemTapped(num: Int)
+    func menuItemTapped(menuItem : MenuItem)
 }
 
 class CollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -13,9 +13,11 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollecti
     
     var items = ["Förslag","Fråga","Beröm","Problem","Skada","Renhållning"]
     var images = ["Forslag","Fraga","Berom","Problem","Trasigt","Renhallning"]
+    var menuItems = [MenuItem]()
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        print(menuItems.count)
+        return menuItems.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -28,7 +30,11 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollecti
         
         cell.imageView.image = UIImage(named: images[indexPath.row])
         cell.buttonTitle.text = items[indexPath.row]
+        cell.imageView.image = UIImage(named: menuItems[indexPath.row].imageName)
+        cell.buttonTitle.text = menuItems[indexPath.row].header
         cell.tag = indexPath.row
+        cell.menuItem = menuItems[indexPath.row]
+        print(cell.menuItem)
         
         return cell
     }
@@ -63,8 +69,10 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollecti
         
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let row = indexPath.row
-        delegate.menuItemTapped(row)
+//        let row = indexPath.row
+//        let currentCell = collectionView.cellForRowAtIndexPath(indexPath) as! FeedbackMenuCell
+        let currentCell = collectionView.cellForItemAtIndexPath(indexPath) as! FeedbackMenuCell
+        delegate.menuItemTapped(currentCell.menuItem)
     }
  
      func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {

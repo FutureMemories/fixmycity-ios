@@ -19,9 +19,18 @@ class FeedBackViewController: UIViewController, FeedbackMenuDelegate, ReportView
         let datasource = collectionView.dataSource as! CollectionViewDataSource
         datasource.delegate = self
         
+        let menuItem1 = MenuItem(header: "Förslag", imageName: "Forslag")
+        let menuItem2 = MenuItem(header: "Fråga", imageName: "Fraga")
+        let menuItem3 = MenuItem(header: "Beröm", imageName: "Berom")
+        let menuItem4 = MenuItem(header: "Problem", imageName: "Problem")
+        let menuItem5 = MenuItem(header: "Skada", imageName: "Trasigt")
+        let menuItem6 = MenuItem(header: "Renhållning", imageName: "Renhallning")
         
-        
+        datasource.menuItems = [menuItem1,menuItem2,menuItem3,menuItem4,menuItem5,menuItem6]
+        print(datasource.menuItems.count)
+//        collectionView.reloadData()
     }
+    
     override func viewDidAppear(animated: Bool) {
         showUI()
     }
@@ -69,8 +78,8 @@ class FeedBackViewController: UIViewController, FeedbackMenuDelegate, ReportView
     }
     
     // MARK: Delegates
-    func menuItemTapped(num: Int) {
-        print(num)
+    func menuItemTapped(menuItem: MenuItem) {
+        print(menuItem.header)
         hideUI()
         performSegueWithIdentifier("ReportSegue", sender: self)
     }
