@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  FixMyCity
-//
-//  Created by Mikael Hellqvist on 14/05/16.
-//  Copyright © 2016 FutureMemories. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

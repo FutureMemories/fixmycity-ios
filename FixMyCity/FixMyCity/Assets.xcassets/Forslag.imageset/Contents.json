@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Forslag.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Forslag@2x.png",
       "scale" : "2x"
     },
     {

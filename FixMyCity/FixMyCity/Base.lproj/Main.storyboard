@@ -142,7 +142,7 @@
                                                 <outlet property="delegate" destination="YGC-BD-M26" id="PHt-5y-igM"/>
                                             </connections>
                                         </collectionView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLM-Hc-tmm">
+                                        <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLM-Hc-tmm">
                                             <rect key="frame" x="249" y="530" width="102" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="102" id="hoS-Uz-1Lj"/>
@@ -161,7 +161,7 @@
                                                 <action selector="closeMe:" destination="hAe-By-6h9" eventType="touchUpInside" id="wvz-Jn-39i"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7E2-Ls-dcR">
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7E2-Ls-dcR">
                                             <rect key="frame" x="209" y="61" width="183" height="23"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Vad gäller ditt ärende?">
@@ -211,6 +211,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Rapport-pinne" width="164" height="164"/>
+        <image name="Rapport-pinne" width="82" height="82"/>
     </resources>
 </document>

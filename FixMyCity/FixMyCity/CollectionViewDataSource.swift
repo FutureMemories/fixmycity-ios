@@ -66,5 +66,21 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollecti
         let row = indexPath.row
         delegate.menuItemTapped(row)
     }
-    
+ 
+     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+        cell.alpha = 0
+        cell.layer.transform = CATransform3DMakeScale(0.5, 0.5, 0.5)
+//        UIView.animateWithDuration(0.2, animations: { () -> Void in
+//            cell.alpha = 1
+//            cell.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)
+//        })
+//        
+        UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            cell.alpha = 1
+            cell.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)
+
+            }) { (true) in
+                
+        }
+    }
 }
